@@ -1,4 +1,4 @@
-package study;
+package study.intro.section01;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,8 +13,8 @@ public class Section0104 {
 		return answer;
 	}
 	
-	//데칼코마니 스타일로 뒤집기  *Strin.valueOf()
-	public ArrayList<String> solution(String[] str) {
+	//데칼코마니 스타일로 뒤집기  *String.valueOf()
+	public ArrayList<String> solution2(String[] str) {
 		ArrayList<String> answer = new ArrayList<String>();
 		for(String s : str) {
 			char[] c = s.toCharArray();
@@ -41,7 +41,14 @@ public class Section0104 {
 		for(int i=0; i < n; i++) {
 			str[i] = kb.next();
 		}
-		for(String s : s4.solution(str)) {
+		
+		System.out.println("StringBuilder 방식");
+		for(String s : s4.solution1(str)) {
+			System.out.println(s);
+		}
+		
+		System.out.println("데칼코마니 스타일로 뒤집기  *String.valueOf() 방식");
+		for(String s : s4.solution2(str)) {
 			System.out.println(s);
 		}
 	}
