@@ -1,6 +1,8 @@
+package study.intro.section02;
+
 import java.util.Scanner;
   
-public class Main {
+public class Section0209 {
   //Integer.MIN_VALUE
   //Math.max()
   public int solution(int n, int[][] arr) {
@@ -28,7 +30,7 @@ public class Main {
     
     
   public static void main(String[] args){
-    Main m = new Main();
+    Section0209 m = new Section0209();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
     int[][] arr = new int[n][n];

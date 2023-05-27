@@ -1,6 +1,8 @@
+package study.intro.section02;
+
 import java.util.Scanner;
   
-public class Main {
+public class Section0203 {
   public String solution(int n, int[] a, int[] b) {
     String answer = "";
   	for(int i = 0; i < n; i++) {
@@ -14,7 +16,7 @@ public class Main {
   }
   
   public static void main(String[] args){
-    Main m = new Main();
+	Section0203 m = new Section0203();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
     int[] a = new int[n];

@@ -1,7 +1,9 @@
+package study.intro.section02;
+
 import java.util.*;
   
-public class Main {
-  // ***** 신경써야 할 것 많음! 꼭 다시 풀자!!
+public class Section0206 {
+  // ***** �떊寃쎌뜥�빞 �븷 寃� 留롮쓬! 瑗� �떎�떆 ���옄!!
   public boolean isPrime(int num) {
     if(num < 2) return false;
     for(int i = 2; i < num; i++) {
@@ -10,7 +12,7 @@ public class Main {
     return true;
   }
   public List<Integer> solution(int n, int[] arr) {
-    Main m = new Main();
+    Section0206 m = new Section0206();
     List<Integer> answer = new ArrayList<Integer>();
     for(int i = 0; i < n; i++) {
       	int tmp = arr[i];
@@ -25,7 +27,7 @@ public class Main {
     return answer;
   }
   public static void main(String[] args){
-    Main m = new Main();
+    Section0206 m = new Section0206();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
     int[] arr = new int[n];

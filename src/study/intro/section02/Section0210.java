@@ -1,6 +1,8 @@
+package study.intro.section02;
+
 import java.util.Scanner;
   
-public class Main {
+public class Section0210 {
   int[] dx = {0, -1, 0, 1};
   int[] dy = {-1, 0, 1, 0};
   
@@ -25,7 +27,7 @@ public class Main {
   }
   
   public static void main(String[] args){
-    Main m = new Main();
+    Section0210 m = new Section0210();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
     int[][] arr = new int[n][n];

@@ -1,8 +1,10 @@
+package study.intro.section02;
+
 import java.util.Scanner;
   
-public class Main {
+public class Section0204 {
 
-  // 배열 사용
+  // 諛곗뿴 �궗�슜
   public int[] solution1(int n) {
     int[] answer = new int[n];
     answer[0] = 1;
@@ -13,7 +15,7 @@ public class Main {
     return answer;
   }
 
-  // 손코딩 방식
+  // �넀肄붾뵫 諛⑹떇
   public void solution2(int n) {
     int a = 1, b = 1, c;
     System.out.print(a + " " + b + " ");
@@ -26,14 +28,14 @@ public class Main {
   }
   
   public static void main(String[] args){
-    Main m = new Main();
+    Section0204 m = new Section0204();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
 
-    System.out.println("배열 사용");
+    System.out.println("諛곗뿴 �궗�슜");
     for(int i : m.solution1(n)) System.out.print(i + " ");
 
-    System.out.println("손코딩 방식");
+    System.out.println("�넀肄붾뵫 諛⑹떇");
     m.solution2(n);
     return ;
   }

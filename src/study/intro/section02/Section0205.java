@@ -1,6 +1,8 @@
+package study.intro.section02;
+
 import java.util.Scanner;
   
-public class Main {
+public class Section0205 {
   public int solution(int n) {
   	int answer = 0;
     int[] arr = new int[n + 1];
@@ -16,7 +18,7 @@ public class Main {
     return answer;
   }
   public static void main(String[] args){
-    Main m = new Main();
+    Section0205 m = new Section0205();
     Scanner in=new Scanner(System.in);
     int n = in.nextInt();
     
