@@ -224,7 +224,7 @@ public class S020412P01 {
 	}
 	public List<Integer> solution06(int n, int[] arr) {
 		List<Integer> answer = new ArrayList<Integer>();
-		Main m = new Main();
+		S020412P01 m = new S020412P01();
 		for(int i= 0; i < n; i++) {
 			int j = 0, k = arr[i];
 			while(k > 0) {
