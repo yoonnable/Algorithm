@@ -12,31 +12,110 @@ public class S060110P01 {
         // problem04(); //Least Recently Used
         // problem05(); //중복 확인
         // problem06(); //장난꾸러기
-        problem07(); //좌표 정렬
+//        problem07(); //좌표 정렬
+//    	problem08(); //이분검색
+//    	problem09(); //뮤직비디오(결정 알고리즘) *******************************
+    	problem10(); //마구간 정하기(결정 알고리즘)
     }
 
-    public void solution10() {
+    public int solution10(int n, int m, int[] arr) {
+        int answer = 0;
+        Arrays.sort(arr);
+        int lt = 1, rt = arr[n - 1] - arr[0];
         
+        while(lt <= rt) {
+        	int middle = (lt + rt) / 2;
+        	int cnt = 1;
+        	int x = arr[0];
+        	for(int i = 1; i < n; i++) {
+        		if(arr[i] - x < middle) {}
+        		else {
+        			cnt++;
+        			x = arr[i];
+        		}
+        	}
+        	if(cnt < m) rt = middle - 1;
+        	else {
+        		lt = middle + 1;
+        		answer = middle;
+        	}
+        }
+        
+        
+        return answer;
     }
     public static void problem10() {
         Scanner kb = new Scanner(System.in);
         S060110P01 s6 = new S060110P01();
+        int n = kb.nextInt();
+        int m = kb.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++) arr[i] = kb.nextInt();
+        System.out.print(s6.solution10(n, m, arr));
+    }
+    
+    public int count(int[] arr, int capacity) {
+    	int size = 0; //DVD 한 장에 담는 사이즈
+    	int cnt = 1; //DVD 장 수
+    	for(int i : arr) {
+    		if(size + i > capacity) { // 기준이 되는 용량보다 커지면 
+    			cnt++; //DVD 장 수 증가
+    			size = i; // 새로운 DVD에 지금 노래 크기로 초기화 해서 새로 담기 시작!
+    		}
+    		else size += i; //기준 값보다 작으면 계속 같은 DVD에 더해서 담아!
+    	}
+    	return cnt;
     }
 
-    public void solution09() {
+    public int solution09(int n, int m, int[] arr) {
+        int answer = 0;
+        int lt = Arrays.stream(arr).max().getAsInt(); //stream 이용
+        int rt = Arrays.stream(arr).sum(); //stream 이용
+        while(lt <= rt) {
+        	int middle = (lt + rt) / 2;
+        	if(count(arr, middle) <= m) {
+        		answer = middle;
+        		rt = middle - 1;
+        	} else {
+        		lt = middle + 1;
+        	}
+        }
         
+        return answer;
     }
+    //lt부터 rt 사이에 정답이 무조건 있다!! 할 때 결정 알고리즘을 사용한다!! 
     public static void problem09() {
         Scanner kb = new Scanner(System.in);
         S060110P01 s6 = new S060110P01();
+        int n = kb.nextInt();
+        int m = kb.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++) arr[i] = kb.nextInt();
+        System.out.println(s6.solution09(n, m, arr));
     }
 
-    public void solution08() {
-        
+    public int solution08(int n, int m, int[] arr) {
+        int answer = 0, lt = 0, rt = n;
+        Arrays.sort(arr);
+        while(lt <= rt) {
+        	int middle = (lt + rt) / 2;
+        	if(arr[middle] == m) {
+        		answer = middle + 1;
+        		break;
+        	}
+        	else if(arr[middle] > m) rt = middle - 1;
+        	else lt = middle + 1;
+        }
+        return answer;
     }
     public static void problem08() {
         Scanner kb = new Scanner(System.in);
         S060110P01 s6 = new S060110P01();
+        int n = kb.nextInt();
+        int m = kb.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++) arr[i] = kb.nextInt();
+        System.out.print(s6.solution08(n, m, arr));
     }
 
 
