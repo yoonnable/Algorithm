@@ -1,4 +1,4 @@
-package study.intro.section07.practice;
+package study.intro.section04.practice;
 
 import java.util.*;
 

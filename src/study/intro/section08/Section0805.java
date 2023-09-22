@@ -1,4 +1,4 @@
-package intro.study.section08;
+package study.intro.section08;
 
 import java.util.*;
 
