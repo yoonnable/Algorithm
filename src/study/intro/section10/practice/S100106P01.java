@@ -10,7 +10,32 @@ public class S100106P01 {
 //        s10.problem02(); // 돌다리 건너기
 //        s10.problem03(); // 최대 부분 증가수열
 //        s10.problem04(); // 가장 높은 탑 쌓기
-        s10.problem05(); // 동전교환(냅색알고리즘) *****
+//        s10.problem05(); // 동전교환(냅색알고리즘) *****
+        s10.problem06(); // 최대점수 구하기(냅색알고리즘)
+    }
+
+    public int solution06(int[] score, int[] time, int n, int m) {
+        int[] dy = new int[m + 1];
+        for(int i = 0; i < n; i++) {
+            for(int j = m; j >= time[i]; j--) {
+                if(dy[j] < dy[j-time[i]] + score[i]) dy[j] = dy[j - time[i]] + score[i];
+            }
+        }
+        return dy[m];
+    }
+
+    public void problem06() {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int[] time = new int[n];
+        int[] score = new int[n];
+        for(int i = 0; i < n; i++) {
+            score[i] = sc.nextInt();
+            time[i] = sc.nextInt();
+        }
+        System.out.println(solution06(score, time, n, m));
+
     }
 
     public int solution05(int[] coin, int goal) {
