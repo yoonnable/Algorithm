@@ -11,5 +11,15 @@
   * 섹션 8 : DFS, BFS 활용
   * 섹션 9 : Greedy Algorithm
   * 섹션 10 : dynamic programming(동적계획법)
-* [Leetcode] 각 섹션별 주제로 문제 풀이 연습
-* 기간 : 23.04.10 ~
+<details>
+ <summary>[백준] 문제 풀이 연습</summary>
+ <ul>
+   <li>String 완료.(23/9/8)</li>
+   <li>DP 진행 중.</li>
+ </ul>
+</details>
+<details>
+ <summary>[Leetcode] 각 섹션별 주제로 문제 풀이 연습</summary>
+ <ul>
+ </ul>
+</details>
