@@ -15,7 +15,8 @@
  <summary>[백준] 문제 풀이 연습</summary>
  <ul>
    <li>String 완료.(23/9/8)</li>
-   <li>DP 진행 중.</li>
+   <li>DP 완료.(24/4/30)</li>
+   <li>Sorting 진행 중.</li>
  </ul>
 </details>
 <details>
