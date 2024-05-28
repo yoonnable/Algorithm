@@ -1,4 +1,4 @@
-package study.baekjoon.sorting;
+package study.baekjoon.stack;
 
 import java.io.*;
 import java.util.Stack;
