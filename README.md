@@ -17,7 +17,8 @@
    <li>String 완료.(23/9/8)</li>
    <li>DP 완료.(24/4/30)</li>
    <li>Sorting 완료. (24/5/25)</li>
-  <li>Stack 진행 중. </li>
+   <li>Stack 완료. (24/5/29)</li>
+   <li>Queue 진행 중. </li>
  </ul>
 </details>
 <details>
